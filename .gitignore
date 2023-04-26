@@ -33,3 +33,5 @@ Parent/.idea/*.xml
 Parent/.idea/sonarlint/*
 Parent/*.iml
 Parent/Child/*.iml
+/Child/gradeshistogram.iml
+/seip2023_practical_assignments.iml
