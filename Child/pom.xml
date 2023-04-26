@@ -15,12 +15,6 @@
   <description>This module creates and shows the histogram chart created when a file of grades is
     inputted by the user using the jfree chart model.</description>
 
-  <properties>
-    <maven.compiler.source>20</maven.compiler.source>
-    <maven.compiler.target>20</maven.compiler.target>
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-  </properties>
-
   <dependencies>
     <dependency>
       <groupId>org.jfree</groupId>
