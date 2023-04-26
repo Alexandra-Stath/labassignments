@@ -60,7 +60,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>C:\Users\30698\Documents\gitrepos\labassignments\Parent\Child\src\main\java\gr\aueb\dmst\AlexandraStathopoulou</mainClass>
+                            <mainClass>package.HistogramGenerator</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
