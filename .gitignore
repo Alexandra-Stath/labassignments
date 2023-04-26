@@ -31,3 +31,5 @@ build/
 Parent/.idea/*
 Parent/.idea/*.xml
 Parent/.idea/sonarlint/*
+Parent/*.iml
+Parent/Child/*.iml
