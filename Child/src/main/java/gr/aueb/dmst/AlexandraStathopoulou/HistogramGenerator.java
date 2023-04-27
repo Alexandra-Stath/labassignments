@@ -12,10 +12,14 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.XYSeries;
 import org.jfree.data.xy.XYSeriesCollection;
 
-/**
- * The purpose of the class is to generate and present the histogram based on a grades file path
- * given by the user.
+/***
+ * @author AlexandraStathopoulou
+ * The purpose of the class is to create, generate and present the image of the frequency histogram.
+ * This is generated based on a grades file given by the user inputing the files full path and is
+ * carried out by the GetChart method.
+ * @since April 2023
  */
+
 public class HistogramGenerator {
 
   public static void main(String[] args) {
@@ -25,10 +29,11 @@ public class HistogramGenerator {
     String line;
     String filename = null;
 
-    /** We have to count the number of entries of the grades to make the array */
+    // We have to count the number of entries of the grades to make the array
 
     try {
-      /** We ask the user to enter the file path and check if it exists in the repository*/
+
+      // We ask the user to enter the file path and check if it exists in the repository
 
       Scanner myObj = new Scanner(System.in);
       System.out.println("Enter the path of the file:");
@@ -44,12 +49,14 @@ public class HistogramGenerator {
 
       reader.close();
     } catch (Exception e) {
-      /** If the path of the file is not valid do not run the code */
+      // If the path of the file is not valid do not execute the code
 
       System.out.println("The path or name of the file is not valid.");
       System.exit(1);
     }
-    /** Knowing the number of entries of the grades we store the values of the grades in the array */
+
+    //Knowing the number of entries in the file we store the number of values in the grades array.
+
 
     String[] grades = new String[counter];
     int[] grd = new int[counter];
@@ -73,8 +80,13 @@ public class HistogramGenerator {
 
   }
 
-  /**
-   * The purpose of the method is to import and create the histogram.
+  /***
+   * The method getChart receives a single dimension Integer array grd. From this array the dataset
+   * that will be used for the visualization is generated. Finally, The chart
+   * is generated with the use of the aforementioned dataset and then
+   * presented in the screen.
+   *
+   * @param grd Single dimension integer array
    */
 
   public void getChart(int[] grd) {
@@ -101,16 +113,20 @@ public class HistogramGenerator {
       data.add(grd[i], fre);
     }
     dataset.addSeries(data);
-    boolean legend = false;
-    boolean tooltips = false;
-    boolean urls = false;
+    boolean legend = false; // do not visualize a legend
+    boolean tooltips = false; // do not visualize tooltips
+    boolean urls = false; // do not visualize urls
 
-    JFreeChart chart = ChartFactory.createXYLineChart("Grades Frequency", "grades", "frequency",
-        dataset,
-        PlotOrientation.VERTICAL, legend, tooltips, urls);
+    JFreeChart chart = ChartFactory.createXYLineChart("Grades Frequency", "grades",
+        "frequency", dataset, PlotOrientation.VERTICAL, legend, tooltips, urls);
+
+    // Initialize a frame for visualizing the chart and attach the previously created chart.
 
     ChartFrame frame = new ChartFrame("Histogram", chart);
     frame.pack();
+
+    // Makes the previously created frame visible
+
     frame.setVisible(true);
   }
 }
