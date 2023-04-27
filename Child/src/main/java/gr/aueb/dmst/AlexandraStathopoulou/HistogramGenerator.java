@@ -105,11 +105,11 @@ public class HistogramGenerator {
     boolean tooltips = false;
     boolean urls = false;
 
-    JFreeChart chart = ChartFactory.createXYLineChart("Your Grades Histogram:", "Grades", "Frequency",
+    JFreeChart chart = ChartFactory.createXYLineChart("Grades Frequency", "grades", "frequency",
         dataset,
         PlotOrientation.VERTICAL, legend, tooltips, urls);
 
-    ChartFrame frame = new ChartFrame("Histogram Generator", chart);
+    ChartFrame frame = new ChartFrame("Histogram", chart);
     frame.pack();
     frame.setVisible(true);
   }
