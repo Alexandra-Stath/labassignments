@@ -15,6 +15,7 @@
 
   <modules>
     <module>Child</module>
+    <module>Unit Testing</module>
   </modules>
 
   <properties>
