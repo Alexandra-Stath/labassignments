@@ -1,5 +1,6 @@
 package math;
 
+import org.junit.Assert;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -11,6 +12,27 @@ import org.junit.rules.ExpectedException;
  */
 public class MyMathTest {
   MyMath mm = new MyMath();
+
+  /*
+   * A unit test that checks an invalid/positive n input
+   * under two that causes an IllegalArgumentException
+   * exception
+   */
+  @Test(expected = IllegalArgumentException.class)
+  public void test_isPrime_exception_under_two() {
+    mm.isPrime(1);
+  }
+
+  /*
+   * A unit test that checks an invalid/negative n input
+   * under two that causes an IllegalArgumentException
+   * exception
+   */
+  @Test(expected = IllegalArgumentException.class)
+  public void test_isPrime_exception_negative() {
+    mm.isPrime(-1);
+  }
+
 
   @Rule
   public ExpectedException thrown = ExpectedException.none();

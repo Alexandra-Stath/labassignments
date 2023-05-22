@@ -119,29 +119,22 @@ public class ArithmeticOperationsTest {
 
   /*
    * A unit test that checks a valid zero input in y variable
-   * that causes an ArithmeticException of divided by zero
-   * as x <= Integer.MAX_VALUE/y must be true and specifies
-   * the exception message
+   * and a non zero input in x variable and returns
+   * zero as result.
    */
   @Test
-  public void test_multiply_arithmetic_exception() {
-    thrown.expect(ArithmeticException.class);
-    thrown.expectMessage("/ by zero");
-    ao.multiply(234, 0);
+  public void test_multiply_y_equals_zero() {
+    Assert.assertEquals(0, ao.multiply(234, 0));
   }
 
   /*
    * A unit test that checks valid zero inputs in both x and y variables
-   * that causes an ArithmeticException of divided by zero
-   * as x <= Integer.MAX_VALUE/y must be true and specifies
-   * the exception message
+   * and returns zero as result
    */
 
   @Test
-  public void test_multiply_arithmetic_exception_zero() {
-    thrown.expect(ArithmeticException.class);
-    thrown.expectMessage("/ by zero");
-    ao.multiply(0, 0);
+  public void test_multiply_arithmetic_both_equal_zero() {
+    Assert.assertEquals(0, ao.multiply(0, 0));
   }
 
   /*
