@@ -10,7 +10,7 @@ public class TestRunner {
 
     Result result = JUnitCore.runClasses(
         ArithmeticOperationsTest.class,
-        MyMathParameterizedTest.class,
+        MyMathParameterizedIsPrimeTest.class,
         MyMathTest.class);
 
     for (Failure failure : result.getFailures()) {

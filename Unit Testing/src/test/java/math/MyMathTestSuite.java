@@ -11,7 +11,7 @@ import org.junit.runners.Suite;
  */
 
 @RunWith(Suite.class)
-@Suite.SuiteClasses({MyMathTest.class,MyMathParameterizedTest.class})
+@Suite.SuiteClasses({MyMathTest.class, MyMathParameterizedIsPrimeTest.class, MyMathParameterizedFactorialTest.class})
 
 public class MyMathTestSuite {
 
