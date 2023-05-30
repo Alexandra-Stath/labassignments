@@ -11,6 +11,7 @@ public class TestRunner {
     Result result = JUnitCore.runClasses(
         ArithmeticOperationsTest.class,
         MyMathParameterizedIsPrimeTest.class,
+        MyMathParameterizedFactorialTest.class,
         MyMathTest.class);
 
     for (Failure failure : result.getFailures()) {
