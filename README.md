@@ -1,4 +1,5 @@
-![This is a workflow status badge]()
+![This is a workflow status badge](https://github.com/Alexandra-Stath/labassignments/actions/workflows/maven.yml/badge.svg
+)
 # Lab Assignments
 
 The purpose of this repository is to submit and work on assignments from the lab projects of our 
