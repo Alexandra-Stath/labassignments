@@ -60,7 +60,7 @@ public class FileIOTest {
      */
     @Test
     public void test_readFile_contains_invalid_entries() {
-        int expectedArray[] = {113, 8, 99};
+        int expectedArray[] = {113, 8, 99, 11, 15, 7};
         int actualArray[] = io.readFile(resourcePath.concat("invalidEntries.txt"));
             Assert.assertArrayEquals(expectedArray, actualArray);
     }

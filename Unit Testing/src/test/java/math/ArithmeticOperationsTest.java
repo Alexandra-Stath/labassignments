@@ -128,6 +128,16 @@ public class ArithmeticOperationsTest {
   }
 
   /*
+   * A unit test that checks a valid zero input in x variable
+   * and a non zero input in y variable and returns
+   * zero as result.
+   */
+  @Test
+  public void test_multiply_x_equals_zero() {
+    Assert.assertEquals(0, ao.multiply(0, 7));
+  }
+
+  /*
    * A unit test that checks valid zero inputs in both x and y variables
    * and returns zero as result
    */
@@ -144,16 +154,6 @@ public class ArithmeticOperationsTest {
   @Test
   public void test_multiply_should_return_nine() {
     Assert.assertEquals(9, ao.multiply(3, 3));
-  }
-
-  /*
-   * A unit test that check valid inputs
-   * of x equals zero and y equals positive
-   * and expects specific result zero
-   */
-  @Test
-  public void test_multiply_should_return_zero() {
-    Assert.assertEquals(0, ao.multiply(0, 7));
   }
 
   /*

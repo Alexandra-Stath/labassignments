@@ -24,11 +24,11 @@ public class ArrayOperations {
      */
     public int[] findPrimesInFile(FileIO fileIo, String filepath, MyMath myMath) {
         List<Integer> primeNumbers = new ArrayList<>();
-        int[] numbers = FileIO.readFile(filepath);
+        int[] numbers = fileIo.readFile(filepath);
 
-        for (int number : numbers) {
-            if (myMath.isPrime(number)) {
-                primeNumbers.add(number);
+        for (int i = 0; i < numbers.length; i++) {
+            if (myMath.isPrime(numbers[i])) {
+                primeNumbers.add(numbers[i]);
             }
         }
 
@@ -37,6 +37,11 @@ public class ArrayOperations {
             primeArray[i] = primeNumbers.get(i);
         }
 
-        return primeArray;
+        if (primeArray.length < 1) {
+            throw new IllegalArgumentException("No prime numbers found");
+        } else {
+            return primeArray;
+        }
+
     }
 }
