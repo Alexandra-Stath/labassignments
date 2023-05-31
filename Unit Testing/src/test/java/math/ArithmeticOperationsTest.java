@@ -104,6 +104,18 @@ public class ArithmeticOperationsTest {
     ao.multiply(-1, 4);
   }
 
+  /* A unit test that checks invalid/negative x and y inputs
+   * that causes an IllegalArgumentException and
+   * specifies the exception message
+   */
+  @Test
+  public void test_multiply_negative_exception_both() {
+    thrown.expect(IllegalArgumentException.class);
+    thrown.expectMessage("x & y should be >= 0");
+    ao.multiply(-7, -1);
+  }
+
+
   /*
    * A unit test that checks an invalid input
    * that causes an IllegalArgumentException of
@@ -134,7 +146,7 @@ public class ArithmeticOperationsTest {
    */
   @Test
   public void test_multiply_x_equals_zero() {
-    Assert.assertEquals(0, ao.multiply(0, 7));
+    Assert.assertEquals(0, ao.multiply(0, 9));
   }
 
   /*

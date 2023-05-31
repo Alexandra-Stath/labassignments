@@ -37,7 +37,7 @@ public class ArithmeticOperations {
 		if (x < 0 || y < 0) {
 			throw new IllegalArgumentException("x & y should be >= 0");
 		} else if (y == 0 || x== 0) {
-			return 0;
+			return x*y;
 		} else if (x <= Integer.MAX_VALUE/y) {
 			return x*y;
 		} else {
