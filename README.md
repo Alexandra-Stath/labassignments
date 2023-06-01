@@ -1,5 +1,5 @@
-![This is a workflow status badge](https://github.com/Alexandra-Stath/labassignments/actions/workflows/maven.yml/badge.svg
-)
+![This is a workflow status badge](https://github.com/Alexandra-Stath/labassignments/actions/workflows/maven.yml/badge.svg)
+
 # Lab Assignments
 
 The purpose of this repository is to submit and work on assignments from the lab projects of our 
@@ -36,4 +36,5 @@ java -jar gradeshistogram-1.0-SNAPSHOT-jar-with-dependencies.jar
 
 in the command prompt that will appear give the ***absolute path*** to the grades file.
 
-[Check] (C:\Users\30698\Documents\gitrepos\labassignments\Parent\Unit Testing\README.md)
+For the Unit testing please check the relative README:
+[Check Unit Testing README] (Alexandra-Stath/labassignments/Unit Testing/README.md)
